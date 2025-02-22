@@ -1,0 +1,7 @@
+FROM airflow:2.10.4
+
+USER root
+
+RUN apt install postgres
+
+RUN psycopg2-binary dbt-core dbt-postgres astronomer-cosmos==1.9.0
